@@ -1,6 +1,7 @@
 .env
 database.json
 docker-compose.yml
+/node_modules
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

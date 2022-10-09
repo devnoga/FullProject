@@ -25,7 +25,7 @@ const dbConfig = {
 if (ENV === 'dev') dbConfig.database = POSTGRES_DB || '';
 else dbConfig.database = POSTGRES_DB_TEST || '';
 
-console.log('DB Config:' + dbConfig.database, dbConfig.host, dbConfig.port);
+console.log('DB Config:' + dbConfig.database);
 
 const pool = new Pool(dbConfig);
 

@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Users = void 0;
 const database_1 = __importDefault(require("../database"));
-const bcrypt_1 = __importDefault(require("bcrypt"));
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const { BCRYPT_PASSWORD, SALT_ROUND } = process.env;
 class Users {
     async index() {
@@ -40,7 +40,7 @@ class Users {
         try {
             const conn = await database_1.default.connect();
             console.log('Connection is on');
-            const hash = bcrypt_1.default.hashSync(user.password + BCRYPT_PASSWORD, parseInt(SALT_ROUND || '10'));
+            const hash = bcryptjs_1.default.hashSync(user.password + BCRYPT_PASSWORD, parseInt(SALT_ROUND || '10'));
             const sql = 'INSERT INTO users (firstname, lastname, username, password) VALUES ($1,$2,$3,$4) RETURNING *';
             const result = await conn.query(sql, [
                 user.firstname,
@@ -62,7 +62,7 @@ class Users {
             const result = await conn.query(sql, [username]);
             conn.release();
             if (result.rows.length) {
-                if (bcrypt_1.default.compareSync(password + BCRYPT_PASSWORD, result.rows[0].password))
+                if (bcryptjs_1.default.compareSync(password + BCRYPT_PASSWORD, result.rows[0].password))
                     return result.rows[0];
             }
             return null;
