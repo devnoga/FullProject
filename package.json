@@ -2,15 +2,17 @@
 	"name": "fullproject",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
 	"scripts": {
 		"backend:install": "cd StoreFront-BackEnd && npm install -f",
-		"backend:start": "cd StoreFront-BackEnd && npm run start",
 		"backend:build": "cd StoreFront-BackEnd && npm run build",
 		"backend:test": "cd StoreFront-BackEnd && npm run test",
+		"backend:start": "cd StoreFront-BackEnd && npm run start",
+		"backend:deploy": "cd StoreFront-BackEnd && npm run deploy",
 		"frontend:install": "cd StoreFront-FrontEnd && npm install -f",
+		"frontend:build": "cd StoreFront-FrontEnd && npm run build",
+		"frontend:test": "cd StoreFront-FrontEnd && npm run test",
 		"frontend:start": "cd StoreFront-FrontEnd && npm run start",
-		"frontend:build": "cd StoreFront-FrontEnd && npm run build"
+		"frontend:deploy": "cd StoreFront-FrontEnd && npm run deploy"
 	},
 	"author": "",
 	"license": "ISC"

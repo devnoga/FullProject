@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', function (req: Request, res: Response) {
-	res.send('Hello World!');
+	res.send('Hello World  World!');
 });
 
 usersRoute(app);

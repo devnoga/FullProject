@@ -15,7 +15,7 @@ const address = '0.0.0.0:3000';
 app.use(body_parser_1.default.json());
 app.use((0, cors_1.default)());
 app.get('/', function (req, res) {
-    res.send('Hello World!');
+    res.send('Hello World  World!');
 });
 (0, users_1.default)(app);
 (0, products_1.default)(app);
