@@ -10,7 +10,7 @@
 		"watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./build --onSuccess \"node ./build/server.js\"",
 		"test": "db-migrate down --env test --count 4 && db-migrate up --env test && ENV=test npx jasmine ",
 		"build": "rm -rf build && npx tsc",
-		"deploy": "eb deploy"
+		"deploy": "eb use StoreFront-BackEnd-dev && eb deploy"
 	},
 	"author": "Udacity",
 	"license": "ISC",
