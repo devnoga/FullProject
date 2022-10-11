@@ -9,7 +9,7 @@
 		"start": "node build/server.js",
 		"watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./build --onSuccess \"node ./build/server.js\"",
 		"test": "db-migrate down --env test --count 4 && db-migrate up --env test && ENV=test npx jasmine ",
-		"build": "npm install . && rm -rf build && npx tsc",
+		"build": "rm -rf build && tsc",
 		"deploy": "eb use StoreFront-BackEnd-dev && eb deploy"
 	},
 	"author": "Udacity",
