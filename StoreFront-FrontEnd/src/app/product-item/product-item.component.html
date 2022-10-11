@@ -1,0 +1,29 @@
+<div fxLayout="row" fxLayoutAlign="space-between">
+	<form>
+		<img
+			src="{{product.url}}"
+			alt="{{product.name}}"
+			width="70%"
+			class="product-image"
+			routerLink="/product/{{product.id}}"
+		/>
+		<h3>{{product.name}}</h3>
+		<p>{{product.price}}</p>
+
+		<select
+			name="quantity"
+			[(ngModel)]="quantity"
+			class="quantity"
+			type="number"
+		>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+
+		<br />
+		<button class="btn btn-primary" (click)="addToCart()">Add to cart</button>
+	</form>
+</div>

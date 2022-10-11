@@ -1,0 +1,24 @@
+<div *ngIf="cartItems.length===0">
+	<h1 class="empty-cart-msg">No Items in your Cart right now!</h1>
+</div>
+
+<div class="cart-container" *ngIf="cartItems.length > 0">
+	<div class="cart-content">
+		<div class="cart-items">
+			<app-cart-item
+				*ngFor="let item of cartItems"
+				[cartItem]="item"
+				(changeQuantity)="changeQuantityInParent($event)"
+				(removeItem)="removeCartItem($event)"
+			></app-cart-item>
+		</div>
+		<div class="cart-total">
+			<h1>Total: {{cartTotal}}</h1>
+		</div>
+	</div>
+
+	<app-user-form
+		style="width: 40%;"
+		(submitOrder)="submitOrder()"
+	></app-user-form>
+</div>

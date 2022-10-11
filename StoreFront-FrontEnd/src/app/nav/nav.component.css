@@ -1,0 +1,7 @@
+.nav {
+	background-color: rgb(12, 171, 224);
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

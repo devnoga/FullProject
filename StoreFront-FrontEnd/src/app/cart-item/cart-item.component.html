@@ -1,0 +1,30 @@
+<form>
+	<div class="container">
+		<img src="{{cartItem.product.url}}" alt="{{cartItem.product.name}}" />
+		<div class="content">
+			<h1>{{cartItem.product.name}}</h1>
+			<p style="font-size: 20px;">{{cartItem.product.price}}</p>
+
+			<select
+				name="quantity"
+				[(ngModel)]="cartItem.quantity"
+				class="form-select quantity"
+				(change)="changeQuantityValue()"
+				type="number"
+			>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+
+			<button
+				class="btn btn-outline-danger me-2"
+				(click)="removeCartItem(cartItem)"
+			>
+				Remove
+			</button>
+		</div>
+	</div>
+</form>

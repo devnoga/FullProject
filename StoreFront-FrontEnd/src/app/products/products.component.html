@@ -1,0 +1,17 @@
+<!-- <div fxLayout="row" fxLayoutAlign="space-between">
+	<app-product-item
+		*ngFor="let product of products"
+		[product]="product"
+	></app-product-item>
+</div> -->
+
+<mat-grid-list
+	cols="3"
+	rowHeight="1:2"
+	gutterSize="10px"
+	style="text-align: center; width: 80%; margin: 10px auto;"
+>
+	<mat-grid-tile *ngFor="let product of products" [colspan]="1" [rowspan]="1">
+		<app-product-item [product]="product"></app-product-item>
+	</mat-grid-tile>
+</mat-grid-list>
