@@ -10,7 +10,8 @@ jobs:
   build:
     docker:
       # the base image can run most needed actions with orbs
-      - image: 'cimg/base:stable'
+      #- image: 'cimg/base:stable'
+      - image: circleci/node:10-browsers
     steps:
       - node/install
       - checkout
