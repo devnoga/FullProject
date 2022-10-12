@@ -10,6 +10,10 @@ jobs:
     docker:
       # the base image can run most needed actions with orbs
       - image: 'cimg/base:stable'
+    filters:
+      branches:
+        only:
+          - main
     steps:
       - node/install
       - checkout

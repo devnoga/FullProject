@@ -67,6 +67,5 @@ http://projectbucket11.s3-website-us-east-1.amazonaws.com/
         2. Install dependecies of the Backend API
         3. Run the Build script of the Frontend App
         4. Run the Build script of the Backend API
-        5. Run the test script of the Backend API
-        6. Run the deploy script of the Backend API
-        7. Run the deploy script of the Frontend App
+        5. Run the deploy script of the Backend API
+        6. Run the deploy script of the Frontend App
