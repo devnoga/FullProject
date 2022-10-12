@@ -1,5 +1,9 @@
 # StoreFront Project
 
+## Frontend project link on aws
+
+http://projectbucket11.s3-website-us-east-1.amazonaws.com/
+
 ## Description
 
     This is a full project. It contains 2 sub projects
