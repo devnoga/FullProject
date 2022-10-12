@@ -13,12 +13,12 @@ http://projectbucket11.s3-website-us-east-1.amazonaws.com/
 
 ### Infrastructure of the FrontEnd APP and dependencies
 
-        Angular App
+        Angular App Deployed on AWS S3
 
 ### Infrastructure of the Backend API and dependencies
 
-        a Restful API
-        Postgres db
+        a Restful API hosted on AWS Elastic BeanStalk environment
+        Postgres db hosted on AWS RDS database instance
 
 ## Project Setup
 
